@@ -46,8 +46,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install dependencies
         run: pip install pylint
-      - name: pylint the setup file
-        run:  pylint setup.py
+      - name: pylint the files
+        run:  pylint *
   black:
     needs: [train, test, lint]
     runs-on: ubuntu-latest
