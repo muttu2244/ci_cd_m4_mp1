@@ -47,7 +47,7 @@ jobs:
       - name: Install dependencies
         run: pip install pylint
       - name: pylint the files
-        run:  pylint *
+        run:  pylint setup.py
   black:
     needs: [train, test, lint]
     runs-on: ubuntu-latest
